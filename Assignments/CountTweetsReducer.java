@@ -10,7 +10,7 @@ public class CountTweetsReducer
 		throws IOException, InterruptedException {
 		int counter = 0;
 		for (IntWritable value : values) {
-			counter = comeunter + value.get();
+			counter = counter + value.get();
 		}
 		context.write(key, new IntWritable(counter));
 	}
